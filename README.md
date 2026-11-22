@@ -18,39 +18,39 @@ This repository contains a collection of foundational Python projects completed 
 ## ◆ System Architecture
 ```mermaid
 graph TD
-    subgraph Suite ["CodSoft Python Tasks Suite"]
-        T1["TO_DO_LIST.py<br/>Task Management"]
-        T2["CALCULATOR.py<br/>Arithmetic Engine"]
-        T3["PASSWORD_GENERATOR.py<br/>Entropy Generator"]
-        T4["ROCK_PAPER_SCISSOR.py<br/>Game Mechanics"]
+    subgraph Suite ["&nbsp; CodSoft Python Tasks Suite &nbsp;"]
+        T1["&nbsp; TO_DO_LIST.py &nbsp;<br/>&nbsp; Task Manager &nbsp;"]
+        T2["&nbsp; CALCULATOR.py &nbsp;<br/>&nbsp; Arithmetic Engine &nbsp;"]
+        T3["&nbsp; PASSWORD_GEN.py &nbsp;<br/>&nbsp; Entropy Generator &nbsp;"]
+        T4["&nbsp; RPS_GAME.py &nbsp;<br/>&nbsp; Game Mechanics &nbsp;"]
     end
 
-    subgraph T1Logic ["To-Do Engine"]
-        T1 --> T1In["Task Input Stream"]
-        T1In --> T1Ops["Create • Update<br/>Delete • Status"]
-        T1Ops --> T1Mem["In-Memory Task Store"]
+    subgraph T1Logic ["&nbsp; To-Do Engine &nbsp;"]
+        T1 --> T1In["&nbsp; Task Input &nbsp;<br/>&nbsp; Stream &nbsp;"]
+        T1In --> T1Ops["&nbsp; Create • Update &nbsp;<br/>&nbsp; Delete • Status &nbsp;"]
+        T1Ops --> T1Mem["&nbsp; In-Memory &nbsp;<br/>&nbsp; Task Store &nbsp;"]
     end
 
-    subgraph T2Logic ["Calculator Engine"]
-        T2 --> T2In["Numeric Inputs & Opcode"]
-        T2In --> T2Eval{"Operation:<br/>+ - * /"}
-        T2Eval --> T2Div{"Zero Check"}
-        T2Div -- DivZero --> T2Err["Math Error Guard"]
-        T2Div -- Valid --> T2Res["Computed Output"]
+    subgraph T2Logic ["&nbsp; Calculator Engine &nbsp;"]
+        T2 --> T2In["&nbsp; Numeric Inputs &nbsp;<br/>&nbsp; &amp; Opcode &nbsp;"]
+        T2In --> T2Eval{"&nbsp; Operation &nbsp;<br/>&nbsp; + - * / &nbsp;"}
+        T2Eval --> T2Div{"&nbsp; Zero &nbsp;<br/>&nbsp; Check &nbsp;"}
+        T2Div -- DivZero --> T2Err["&nbsp; Math Error &nbsp;<br/>&nbsp; Guard &nbsp;"]
+        T2Div -- Valid --> T2Res["&nbsp; Computed &nbsp;<br/>&nbsp; Output &nbsp;"]
     end
 
-    subgraph T3Logic ["Password Generator"]
-        T3 --> T3Len["Complexity &<br/>Length Parameters"]
-        T3Len --> T3Charset["Character Sets:<br/>Upper • Lower<br/>Digits • Punct"]
-        T3Charset --> T3RNG["Pseudo-Random<br/>String Sampler"]
-        T3RNG --> T3Pass["Generated Password<br/>String"]
+    subgraph T3Logic ["&nbsp; Password Generator &nbsp;"]
+        T3 --> T3Len["&nbsp; Length &amp; &nbsp;<br/>&nbsp; Complexity &nbsp;"]
+        T3Len --> T3Charset["&nbsp; Character Sets: &nbsp;<br/>&nbsp; Upper • Lower &nbsp;<br/>&nbsp; Digits • Punct &nbsp;"]
+        T3Charset --> T3RNG["&nbsp; Pseudo-Random &nbsp;<br/>&nbsp; Sampler &nbsp;"]
+        T3RNG --> T3Pass["&nbsp; Generated &nbsp;<br/>&nbsp; Password &nbsp;"]
     end
 
-    subgraph T4Logic ["RPS Game Loop"]
-        T4 --> T4User["User Choice"]
-        T4 --> T4Bot["RNG Computer Choice"]
-        T4User & T4Bot --> T4Judge["Outcome Evaluator"]
-        T4Judge --> T4Score["Cumulative Score Tracker"]
+    subgraph T4Logic ["&nbsp; RPS Game Loop &nbsp;"]
+        T4 --> T4User["&nbsp; User Choice &nbsp;"]
+        T4 --> T4Bot["&nbsp; RNG Choice &nbsp;"]
+        T4User & T4Bot --> T4Judge["&nbsp; Outcome &nbsp;<br/>&nbsp; Evaluator &nbsp;"]
+        T4Judge --> T4Score["&nbsp; Cumulative &nbsp;<br/>&nbsp; Score Tracker &nbsp;"]
     end
 ```
 
