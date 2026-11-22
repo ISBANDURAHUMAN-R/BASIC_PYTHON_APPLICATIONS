@@ -27,23 +27,23 @@ graph TD
 
     subgraph T1Logic ["To-Do Engine"]
         T1 --> T1In["Task Input Stream"]
-        T1In --> T1Ops["Create • Update • Delete • Status"]
+        T1In --> T1Ops["Create • Update<br/>Delete • Status"]
         T1Ops --> T1Mem["In-Memory Task Store"]
     end
 
     subgraph T2Logic ["Calculator Engine"]
         T2 --> T2In["Numeric Inputs & Opcode"]
-        T2In --> T2Eval{"Operation: + - * /"}
+        T2In --> T2Eval{"Operation:<br/>+ - * /"}
         T2Eval --> T2Div{"Zero Check"}
         T2Div -- DivZero --> T2Err["Math Error Guard"]
         T2Div -- Valid --> T2Res["Computed Output"]
     end
 
     subgraph T3Logic ["Password Generator"]
-        T3 --> T3Len["Complexity & Length Parameters"]
-        T3Len --> T3Charset["Character Sets: Upper • Lower • Digits • Punct"]
-        T3Charset --> T3RNG["Pseudo-Random String Sampler"]
-        T3RNG --> T3Pass["Generated Password String"]
+        T3 --> T3Len["Complexity &<br/>Length Parameters"]
+        T3Len --> T3Charset["Character Sets:<br/>Upper • Lower<br/>Digits • Punct"]
+        T3Charset --> T3RNG["Pseudo-Random<br/>String Sampler"]
+        T3RNG --> T3Pass["Generated Password<br/>String"]
     end
 
     subgraph T4Logic ["RPS Game Loop"]
